@@ -3,7 +3,7 @@ import loadAbout from "./pages/About";
 import loadHome from "./pages/Home";
 import loadMenu from "./pages/Menu";
 
-const tabButtons = document.querySelectorAll(".nav__button");
+const tabButtons = document.querySelectorAll(".header__button");
 const contentDiv = document.querySelector("#content");
 
 function handleSwitchTab(e) {
