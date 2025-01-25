@@ -23,7 +23,7 @@ function createHome() {
 	p2.textContent =
 		"Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, magni recusandae.";
 
-	const button = document.querySelector("button");
+	const button = document.createElement("button");
 	button.textContent = "Lorem Ipsum Dolor";
 
 	homePage.append(banner, h1, h2, p1, p2, button);
