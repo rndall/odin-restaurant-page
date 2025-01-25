@@ -1,19 +1,23 @@
-import homeBanner from "../img/homeBanner.jpg";
+import homeBannerImg from "../img/homeBanner.jpg";
 
 function createHome() {
 	const homePage = document.createElement("div");
 
 	const banner = document.createElement("img");
-	banner.src = homeBanner;
+	banner.src = homeBannerImg;
 	banner.classList.add("home__banner");
 
 	const h1 = document.createElement("h1");
 	h1.textContent = "Lorem Ipsum Dolor";
-	h1.classList.add("home__title", "home__title--large");
+	h1.classList.add(
+		"home__title",
+		"home__title--size-6xl",
+		"home__title--weight-normal",
+	);
 
 	const h2 = document.createElement("h2");
 	h2.textContent = "Lorem Ipsum Dolor Sit";
-	h2.classList.add("home__title", "home__title--bold");
+	h2.classList.add("home__title");
 
 	const p1 = document.createElement("p");
 	p1.innerHTML =
