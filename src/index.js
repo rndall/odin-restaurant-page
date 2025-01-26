@@ -7,11 +7,15 @@ const tabButtons = document.querySelectorAll(".header__button");
 const contentDiv = document.querySelector("#content");
 
 function handleSwitchTab(e) {
-	const tab = e.target.dataset.tab;
+	const button = e.target;
 
 	contentDiv.textContent = "";
 
-	switch (tab) {
+	for (const tabBtn of tabButtons) {
+		tabBtn.setAttribute("aria-current", "false");
+	}
+
+	switch (button.dataset.tab) {
 		case "home":
 			loadHome();
 			break;
@@ -24,10 +28,12 @@ function handleSwitchTab(e) {
 			loadAbout();
 			break;
 	}
+
+	button.setAttribute("aria-current", "true");
 }
 
 for (const btn of tabButtons) {
 	btn.addEventListener("click", handleSwitchTab);
 }
 
-loadHome();
+tabButtons[0].click();
