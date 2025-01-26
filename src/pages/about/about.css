@@ -1,0 +1,52 @@
+:root {
+	--about-color: rgb(249, 87, 56);
+}
+
+.about__section {
+	width: 100vw;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+	min-height: 55dvh;
+	display: flex;
+}
+
+.about__section--banner {
+	background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+		url("../../img/ourStory.jpg") 50% 85%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.about__title--banner {
+	width: 1280px;
+	margin: auto;
+}
+
+.about__title--color-white {
+	color: white;
+}
+
+.about__title--color-orange {
+	color: var(--about-color);
+}
+
+.about__title--weight-thin {
+	font-weight: normal;
+}
+
+.about__title--4xl {
+	font-size: 2.5rem;
+}
+
+.about__title--6xl {
+	font-size: 3.75rem;
+}
+
+.about__text-content {
+	margin-block: 90px 36px;
+	display: grid;
+	gap: 16px;
+}
