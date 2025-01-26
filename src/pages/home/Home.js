@@ -3,6 +3,7 @@ import homeBannerImg from "../../img/homeBanner.jpg";
 
 function createHome() {
 	const homePage = document.createElement("div");
+	homePage.classList.add("home");
 
 	const banner = document.createElement("img");
 	banner.src = homeBannerImg;
@@ -23,13 +24,16 @@ function createHome() {
 	const p1 = document.createElement("p");
 	p1.innerHTML =
 		"Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur illum <strong>quidem</strong> vel nihil consectetur quod. Saepe sit illum incidunt doloribus natus maxime enim, id quo excepturi unde eum, ex porro sint repellendus atque! Ea, soluta saepe?";
+	p1.classList.add("home__text");
 
 	const p2 = document.createElement("p");
 	p2.textContent =
 		"Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, magni recusandae.";
+	p2.classList.add("home__text");
 
 	const button = document.createElement("button");
 	button.textContent = "Lorem Ipsum Dolor";
+	button.classList.add("home__button");
 
 	homePage.append(banner, h1, h2, p1, p2, button);
 
