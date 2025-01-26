@@ -1,9 +1,10 @@
+import "./menu.css";
 import menuBannerImg from "../../img/menuBanner.jpg";
 import shallotWafflePizzaImg from "../../img/shallotWafflePizza.jpg";
 
 function createMenuCard(title, description, price, imageSrc) {
 	const card = document.createElement("div");
-	card.classList.add("card");
+	card.classList.add("menu__card");
 
 	const itemTitle = document.createElement("h4");
 	itemTitle.textContent = title;
@@ -11,7 +12,7 @@ function createMenuCard(title, description, price, imageSrc) {
 
 	const itemDescription = document.createElement("p");
 	itemDescription.textContent = description;
-	itemDescription.classList.add("menu__text", "main__text--color-gray");
+	itemDescription.classList.add("menu__text", "menu__text--color-gray");
 
 	const itemHeader = document.createElement("div");
 	itemHeader.append(itemTitle, itemDescription);
@@ -21,6 +22,7 @@ function createMenuCard(title, description, price, imageSrc) {
 	itemPrice.classList.add("menu__text");
 
 	const itemInfo = document.createElement("div");
+	itemInfo.classList.add("menu__item-info");
 	itemInfo.append(itemHeader, itemPrice);
 
 	const itemImage = document.createElement("img");
@@ -35,6 +37,7 @@ function createMenuCard(title, description, price, imageSrc) {
 
 function createMenu() {
 	const menuPage = document.createElement("div");
+	menuPage.classList.add("menu");
 
 	const h1 = document.createElement("h1");
 	h1.textContent = "Lorem Ipsum Dolor";
@@ -49,6 +52,7 @@ function createMenu() {
 	featuredItemsTitle.classList.add("menu__title", "menu__title--size-lg");
 
 	const itemSection1 = document.createElement("div");
+	itemSection1.classList.add("menu__cards-container");
 	itemSection1.append(
 		createMenuCard(
 			"Shallot Waffle Pizza",
@@ -64,6 +68,10 @@ function createMenu() {
 		),
 	);
 
+	const menuSection1 = document.createElement("div");
+	menuSection1.classList.add("menu__item-section");
+	menuSection1.append(featuredItemsTitle, itemSection1);
+
 	const foodMenuTitle = document.createElement("h2");
 	foodMenuTitle.textContent = "Food Menu";
 	foodMenuTitle.classList.add("menu__title", "menu__title--size-xl");
@@ -73,6 +81,7 @@ function createMenu() {
 	dumplingsTitle.classList.add("menu__title", "menu__title--size-lg");
 
 	const itemSection2 = document.createElement("div");
+	itemSection2.classList.add("menu__cards-container");
 	itemSection2.append(
 		createMenuCard(
 			"Calamansileaf Pig",
@@ -88,15 +97,15 @@ function createMenu() {
 		),
 	);
 
-	menuPage.append(
-		h1,
-		banner,
-		featuredItemsTitle,
-		itemSection1,
-		foodMenuTitle,
-		dumplingsTitle,
-		itemSection2,
-	);
+	const menuSection2 = document.createElement("div");
+	menuSection2.classList.add("menu__item-section");
+	menuSection2.append(dumplingsTitle, itemSection2);
+
+	const menuItemsDiv = document.createElement("div");
+	menuItemsDiv.classList.add("menu__items");
+	menuItemsDiv.append(menuSection1, foodMenuTitle, menuSection2);
+
+	menuPage.append(h1, banner, menuItemsDiv);
 
 	return menuPage;
 }
