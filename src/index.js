@@ -1,7 +1,7 @@
 import "./style.css";
-import loadAbout from "./pages/About";
-import loadHome from "./pages/Home";
-import loadMenu from "./pages/Menu";
+import loadAbout from "./pages/about/About";
+import loadHome from "./pages/home/Home";
+import loadMenu from "./pages/menu/Menu";
 
 const tabButtons = document.querySelectorAll(".header__button");
 const contentDiv = document.querySelector("#content");
