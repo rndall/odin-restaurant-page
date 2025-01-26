@@ -1,0 +1,10 @@
+.home {
+	margin: auto;
+	max-width: 1280px;
+}
+
+.home__banner {
+	width: 100%;
+	height: 500px;
+	object-fit: cover;
+}

@@ -1,5 +1,5 @@
-import menuBannerImg from "../img/menuBanner.jpg";
-import shallotWafflePizzaImg from "../img/shallotWafflePizza.jpg";
+import menuBannerImg from "../../img/menuBanner.jpg";
+import shallotWafflePizzaImg from "../../img/shallotWafflePizza.jpg";
 
 function createMenuCard(title, description, price, imageSrc) {
 	const card = document.createElement("div");

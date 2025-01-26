@@ -1,7 +1,9 @@
-import homeBannerImg from "../img/homeBanner.jpg";
+import "./home.css";
+import homeBannerImg from "../../img/homeBanner.jpg";
 
 function createHome() {
 	const homePage = document.createElement("div");
+	homePage.classList.add("home");
 
 	const banner = document.createElement("img");
 	banner.src = homeBannerImg;
